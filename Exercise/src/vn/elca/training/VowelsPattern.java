@@ -3,7 +3,7 @@ package vn.elca.training;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class VowelsPatternFormatter {
+public class VowelsPattern {
 
 	public static void main(String[] args) {
 		Pattern pattern = Pattern.compile("[aeiou]",Pattern.CASE_INSENSITIVE);
