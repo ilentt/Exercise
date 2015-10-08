@@ -5,16 +5,11 @@ import java.util.regex.Pattern;
 
 public class VowelsPattern {
 
-	public static void main(String[] args) {
+	public static boolean sameVowelPatternOfLongWord(String s1, String s2) throws InvalidInputException {
+		boolean flag = false;
 		Pattern pattern = Pattern.compile("[aeiou]",Pattern.CASE_INSENSITIVE);
-		String string1 = "HANEMO";
-		String string2 = "TENAMO";
-
-		Matcher matcher1 = pattern.matcher(string1);
-		Matcher matcher2 = pattern.matcher(string2);
-		/*
-		 * if(matcher.matches()) { System.out.println(matcher.group(1)); }
-		 */
+		Matcher matcher1 = pattern.matcher(s1);
+		Matcher matcher2 = pattern.matcher(s2);
 		String str1 = "";
 		while (matcher1.find()) {
 			str1 += matcher1.group();
@@ -29,11 +24,17 @@ public class VowelsPattern {
 		
 		System.out.println(str2);
 		
-		
-		if (str1.equals(str2)) {
-			System.out.println(true);
-		} else
-			System.out.println(false);
-		
+		if (str1.equals(str2))
+			flag = true;
+				
+		return flag;
+	}
+	public static void main(String[] args) {
+		try {
+			System.out.println(sameVowelPatternOfLongWord("TRABAIGRAN", "JAMACICA"));
+		} catch (InvalidInputException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 }
