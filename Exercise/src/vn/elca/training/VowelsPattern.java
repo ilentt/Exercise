@@ -34,6 +34,7 @@ public class VowelsPattern {
 			System.out.println(sameVowelPatternOfLongWord("TRABAIGRAN", "JAMACICA"));
 		} catch (InvalidInputException e) {
 			// TODO Auto-generated catch block
+			e = new InvalidInputException("Input string are invalid");
 			e.printStackTrace();
 		}		
 	}
