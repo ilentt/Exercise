@@ -1,6 +1,5 @@
 package vn.elca.training;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +20,7 @@ public class Question3 {
 		sortedCarBrands.addAll(carPrices.keySet());
 		//List<String> sortedCarBrands = new ArrayList<String>();
 		
-		/*sortedCarBrands.add("BMW");
+		/*sortedCarBrands.add("BMW")O;
 		sortedCarBrands.add("Kia-Forte");
 		sortedCarBrands.add("Camry");
 		sortedCarBrands.add("Audi");*/
