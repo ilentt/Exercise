@@ -6,19 +6,21 @@ import java.util.Map;
 public class Question4 {
 	
 	public static void main(String[] args) {
-		Map<String, Long> carPrices = new HashMap<String, Long>();
-		carPrices.put("BMW", (long) 70000);
-		carPrices.put("Kia-Forte", (long) 29000);
-		carPrices.put("Camry", (long) 9666);
-		carPrices.put("Audi", (long) 9886);
+		Map<String, Integer> carPrices = new HashMap<String, Integer>();
+		carPrices.put("BMW", 70000);
+		carPrices.put("Kia-Forte", 29000);
+		carPrices.put("Toyota-Camry", 60000);
+		carPrices.put("Lexus", 90000);
+		carPrices.put("Honda-Civic", 31000);
+		carPrices.put("Audi", 90000);
 		
-		String priceOfAllCar = "";
-		StringBuilder stringBuider = new StringBuilder();
-		for(Map.Entry<String, Long> carPrice : carPrices.entrySet()){
+		//String priceOfAllCar = "";
+		StringBuilder priceOfAllCar = new StringBuilder();
+		for(Map.Entry<String, Integer> carPrice : carPrices.entrySet()){
 			String str = "["+carPrice.getKey() +" ("+ carPrice.getValue()+")] ";
-			stringBuider.append(str);
+			priceOfAllCar.append(str);
 		}
-		priceOfAllCar = stringBuider.toString();
+		//priceOfAllCar = stringBuider.toString();
 		System.out.println(priceOfAllCar);
 	}
 }

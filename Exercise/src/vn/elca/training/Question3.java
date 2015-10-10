@@ -18,6 +18,8 @@ public class Question3 {
 
 		List<String> sortedCarBrands = new Vector<String>();
 		sortedCarBrands.addAll(carPrices.keySet());
+		
+		//sortedCarBrands.addAll(carPrices.entrySet());
 		//List<String> sortedCarBrands = new ArrayList<String>();
 		
 		/*sortedCarBrands.add("BMW")O;
