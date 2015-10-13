@@ -1,9 +1,6 @@
 package vn.elca.training;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -16,12 +13,15 @@ public class Question10 {
 	public static void sortDates(List<DAY> dayList) {
 		Set<DAY> set = new TreeSet<DAY>(dayList);
 		
+		/*
 		List<DAY> list = new ArrayList<DAY>(set);
 		Collections.sort(list, Collections.reverseOrder());
 		set = new LinkedHashSet<DAY>(list);
-		
+		*/
 		for (DAY day : set) {
-			System.out.println(day);
+			if(day.ordinal() == 6) {
+				System.out.println(day.ordinal());
+			}
 		}
 
 	}
@@ -31,9 +31,8 @@ enum DAY {
 	MON("Monday"), TUE("Tuesday"), WED("Wednesday"), THU("Thurday"), FRI("Friday"), SAT("Saturday"), SUN("Sunday");
 
 	String m_name;
-
+	
 	DAY(String name) {
 		m_name = name;
 	}
-
 }
