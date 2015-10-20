@@ -45,12 +45,12 @@ public class BookStore {
 	public void runApp() {
 		BookStore bs = new BookStore();
 		Book b1 = new Book("Henrry Poter", 551, "Harry", 5);
-		Book b2 = new Book("War and Peace", 416, "Tonstoive", 7);
+		Book b2 = new Book("War and Peace", 416, "Lev Tolstoy", 7);
 		Book b3 = new Book("Oliver Twist", 979, "Harry", 3);
 		Book b4 = new Book("The last leaf", 421, "Harry", 8);
 		Book b5 = new Book("Missisipi", 1254, "Harry", 2);
-		Book b6 = new Book("Gone a Wind", 685, "Tonstoive", 7);
-		Book b7 = new Book("Gone a Wind", 685, "Tonstoive", 7);
+		Book b6 = new Book("War and Peace", 685, "Lev Tolstoy", 7);
+		Book b7 = new Book("Anna Karenina", 685, "Lev Tolstoy", 7);
 
 		bs.addBook(b1);
 		bs.addBook(b2);
@@ -130,7 +130,7 @@ class Book {
 	}
 
 	public String toString() {
-		return "[Author: " + this.m_author + ", Book: " + this.m_name + ", Price: " + this.m_price + ", Qut: "
-				+ this.m_quantity + "]\n";
+		return "\n[Author: " + this.m_author + ", Book: " + this.m_name + ", Price: " + this.m_price + ", Qut: "
+				+ this.m_quantity + "]";
 	}
 }
