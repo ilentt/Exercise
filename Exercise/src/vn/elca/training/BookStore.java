@@ -31,9 +31,9 @@ public class BookStore {
 		Collections.sort(list, new Comparator<Book>() {
 
 			@Override
-			public int compare(Book o1, Book o2) {
+			public int compare(Book b1, Book b2) {
 
-				return o2.getM_price() - o1.getM_price();
+				return b2.getM_price() - b1.getM_price();
 			}
 
 		});
@@ -43,7 +43,7 @@ public class BookStore {
 	}
 	
 	public void runApp() {
-		BookStore b = new BookStore();
+		BookStore bs = new BookStore();
 		Book b1 = new Book("Henrry Poter", 551, "Harry", 5);
 		Book b2 = new Book("War and Peace", 416, "Tonstoive", 7);
 		Book b3 = new Book("Oliver Twist", 979, "Harry", 3);
@@ -52,19 +52,19 @@ public class BookStore {
 		Book b6 = new Book("Gone a Wind", 685, "Tonstoive", 7);
 		Book b7 = new Book("Gone a Wind", 685, "Tonstoive", 7);
 
-		b.addBook(b1);
-		b.addBook(b2);
-		b.addBook(b3);
-		b.addBook(b4);
-		b.addBook(b5);
-		b.addBook(b6);
-		b.addBook(b7);
+		bs.addBook(b1);
+		bs.addBook(b2);
+		bs.addBook(b3);
+		bs.addBook(b4);
+		bs.addBook(b5);
+		bs.addBook(b6);
+		bs.addBook(b7);
 		
-		for (Map.Entry<String, Set<Book>> book : b.m_bookStore.entrySet()) {
+		for (Map.Entry<String, Set<Book>> book : bs.m_bookStore.entrySet()) {
 			System.out.println(book.getValue().toString());
 		}
 		
-		System.out.println(b.getTheMostExpensiveBookOf("Harry"));
+		System.out.println(bs.getTheMostExpensiveBookOf("Harry"));
 	}
 
 	public static void main(String[] args) {
